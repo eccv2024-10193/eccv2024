@@ -1,0 +1,62 @@
+# Note: Any filepath/dirpath specified will be assumed to be relative to 
+# cfg/private.yml::rootDataDir, unless an absolute path is provided.
+
+# Runner to use.
+#runner: tf_bnn_weed_map_random
+runner: tf_bnn_weed_map_sp_active_learn
+#runner: tf_bnn_cityscape
+#runner: tf_bnn_cityscape_random
+#runner: tf_bnn_cityscape_sp_active_learn
+# Starting epoch.
+mode: train
+test_vis: true
+
+# Input dataset.
+
+datasets:
+  nassar2020:
+    dir:
+  cityscapes:
+    dir:
+
+active_learn:
+  init_batch: 50
+  increment_batch: 50
+  mode: 2 # 0 for random, 1 for max entropy, 2 for BALD, 3 for variance,
+  rerank_step: true
+  pixel_mode: 1 # 0 for percentage, 1 for jenks break
+  pixel_percent: 0.7246 # this is only used when pixel_mode==0
+  sp_mode: 1 # 0 for fz, 1 for slic
+  sp_param: 100 # number of sp per image
+  num_cluster: 2 # number of jenks natural break clusters
+  regen_mask: false # regenerate mask for previous data
+  use_certain: false # set to true to mix in low uncertainty image
+  use_ignore: true # set to use ignore label
+
+
+models:
+  Unet:
+    numFilters: 32
+    dropout: 0.5
+    dropcenter: 3
+    numClass: 7
+    numChan: 4
+  Deeplab:
+    dropout: 0.5
+
+
+# Common training settings
+numEpochs: 500 # max epoch
+batchSize: 4
+lr: 0.0001
+
+# Local Performance.
+numWorkers: 1              # for multi-gpu
+
+# Experiment tracking.
+experiment:
+  logger: neptune   # "neptune", "local"
+  projectName: 
+  experimentName: neptune_test
+  tags: [ "test tag",  ]
+

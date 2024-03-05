@@ -1,0 +1,6 @@
+neptune: 
+  api_key: 
+  username: 
+  project_name: my_sandbox_project
+
+rootDataDir: run_log/ # this is where checkpoints/visualizations will be stored
