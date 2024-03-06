@@ -1,7 +1,7 @@
 class ActiveLearn:
     def __init__(self, d: dict):
-        self.init_size = d.get("init_size", 50)
-        self.step_size = d.get("step_size", 50)
+        self.init_size = d.get("init_size", 0.1)
+        self.step_size = d.get("step_size", 0.1)
         self.mode = d.get("mode", 0)
         self.rerank_step = d.get("rerank_step", True)
         self.pixel_mode = d.get("pixel_mode", 0)
