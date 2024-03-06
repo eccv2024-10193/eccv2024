@@ -162,7 +162,7 @@ class RunnerBnnWeedMapRandom(RunnerBnnWeedMap):
 
         """
         self.train_init_batch()
-        for count in range(6):
+        for count in range(CFG.activeLearn.num_step):
             print("Start active learn step {}!!".format(count))
             self.run_active_learn_step(count)
             self.test()

@@ -22,6 +22,7 @@ datasets:
 active_learn:
   init_size: 0.1  # fraction of whole dataset
   step_size: 0.1
+  num_step: 6
   mode: 2 # 0 for random, 1 for max entropy, 2 for BALD, 3 for variance,
   rerank_step: true
   pixel_mode: 1 # 0 for percentage, 1 for jenks break
