@@ -27,7 +27,7 @@ active_learn:
   pixel_mode: 1 # 0 for percentage, 1 for jenks break
   pixel_percent: 0.7246 # this is only used when pixel_mode==0
   sp_mode: 1 # 0 for fz, 1 for slic
-  sp_param: 100 # number of sp per image
+  sp_param: 5000 # number of sp per image
   num_cluster: 2 # number of jenks natural break clusters
   regen_mask: false # regenerate mask for previous data
   use_certain: false # set to true to mix in low uncertainty image
@@ -47,7 +47,7 @@ models:
 
 # Common training settings
 numEpochs: 500 # max epoch
-batchSize: 4
+batchSize: 5
 lr: 0.0001
 
 # Local Performance.
