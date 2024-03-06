@@ -17,9 +17,6 @@ from cfg.cfg_main import CFG
 from ds.ds_def import DatasetSubset
 from neptunecontrib.monitoring.keras import NeptuneMonitor
 
-gpus = tf.config.experimental.list_physical_devices('GPU')
-tf.config.experimental.set_memory_growth(gpus[0], True)
-
 
 class RunnerBnnCityscape(RunnerBaseTf):
     def __init__(self, use_generator=False):
