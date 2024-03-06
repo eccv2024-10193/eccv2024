@@ -27,10 +27,8 @@ class RunnerBnnWeedMapRandom(RunnerBnnWeedMap):
         self.rank_list_val = []
         self.mc_iteration = 20
         self.mc_step = 5
-        #self.init_size = 0.0259  # 50 images, train+val
-        #self.step_size = 0.0259
-        self.init_size = 0.1
-        self.step_size = 0.1
+        self.init_size = CFG.activeLearn.init_size
+        self.step_size = CFG.activeLearn.step_size
 
     def train_init_batch(self):
         """

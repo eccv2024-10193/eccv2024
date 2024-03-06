@@ -32,8 +32,8 @@ class RunnerBnnCityscapeSpActiveLearn(RunnerBnnCityscape):
         self.rank_list_train = []
         self.rank_list_val = []
         self.mc_iteration = 5
-        self.init_size = 0.1
-        self.step_size = 0.1
+        self.init_size = CFG.activeLearn.init_size
+        self.step_size = CFG.activeLearn.step_size
         self.gen_percent = {'gen_sp': [], 'total_sp': []}
         self.class_label_pixel_count = np.zeros(self.num_class)
         self.class_label_sp_count = np.zeros(self.num_class)
