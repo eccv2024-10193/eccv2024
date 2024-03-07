@@ -1,4 +1,5 @@
 # Dynamic-budget Superpixel Active Learning
+This repository is implemented with Keras.
 
 ## Requirements
 - Python 3.11+
@@ -23,7 +24,7 @@
   - Place provided **cityscapes_filelist/val.txt** in 
     - leftImg8bit_trainvaltest/leftImg8bit/val 
   
-
+  
 - **Nassar 2020** 
   - train (Dataset folder structure)
     - data (RGB images)
@@ -32,6 +33,9 @@
       - val.txt
       - test.txt
     - mask (Labels)
+
+The Nassar 2020 dataset can be accessed with the link below:
+https://www.kaggle.com/datasets/yueminwang/nassar-2020
 
 ## Config Files
 Copy and rename  **cfg/config_template.yml** to **cfg/config.yml**
