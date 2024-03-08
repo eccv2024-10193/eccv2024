@@ -48,7 +48,7 @@ class RunnerBnnCityscape(RunnerBaseTf):
         return model
 
     def get_model(self):
-        model = Deeplabv3(weights='pascal_voc', input_tensor=None, input_shape=CityScapes.IM_SHAPE,
+        model = Deeplabv3(input_shape=CityScapes.IM_SHAPE,
                           classes=CityScapes.NUM_CLASS,
                           backbone='xception',
                           activation='softmax', dropout=CFG.models.Deeplab.dropout)
