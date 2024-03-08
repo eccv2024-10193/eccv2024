@@ -62,7 +62,8 @@ This file controls experiment parameters.
       - **step_size**: AL step size, fraction of whole dataset 
       - **pixel_mode**: 0 for static-budget, 1 for dynamic-budget
       - **pixel_percent**: static-budget fraction per image; 
-        - this controls the percentage of superpixels in an image will be labelled; only for static-budget 
+        - this controls the percentage of superpixels in an image to be **ignored**;
+        -  (1-pixel_percent) is the percentage of superpixel to be labelled ; only for static-budget 
       - **sp_param**: number of superpixels per image
       - **experiment**
         - **logger**: neptune; using neptune to record experiments

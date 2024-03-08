@@ -323,7 +323,7 @@ class RunnerBnnWeedMapSpActiveLearn(RunnerBnnWeedMap):
         total_fg = np.sum(self.gen_percent['fg_sp'])
         total_sp = np.sum(self.gen_percent['total_sp'])
         self.exp.log_metric("percent_sp_fg", total_fg / total_sp)
-        self.exp.log_metric("percent_sp_gen_fg", ignored_fg / total_fg)
+        self.exp.log_metric("percent_sp_ignored_fg", ignored_fg / total_fg)
         print(f'Ingored FG {ignored_fg}, Total FG {total_fg}, Total SP {total_sp}')
 
     def train(self):

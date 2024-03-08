@@ -326,7 +326,7 @@ class RunnerBnnCityscapeSpActiveLearn(RunnerBnnCityscape):
         self.optimizer = tf.keras.optimizers.Adam(learning_rate=CFG.lr)
         callbacks, initial_epoch = self.init_model()
         self.train_on_list(callbacks, initial_epoch)
-        self.exp.log_metric("percent_sp_gen", np.sum(self.gen_percent['gen_sp']) / np.sum(self.gen_percent['total_sp']))
+        self.exp.log_metric("percent_sp_ignored", np.sum(self.gen_percent['gen_sp']) / np.sum(self.gen_percent['total_sp']))
         for i in range(self.num_class):
             self.exp.log_metric(f"pixel_count_{self.train_full.lab2name(i)}",
                                 self.class_label_pixel_count[i])
