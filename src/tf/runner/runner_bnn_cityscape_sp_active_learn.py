@@ -31,7 +31,7 @@ class RunnerBnnCityscapeSpActiveLearn(RunnerBnnCityscape):
         self.val_list = []
         self.rank_list_train = []
         self.rank_list_val = []
-        self.mc_iteration = 5
+        self.mc_iteration = 20
         self.init_size = CFG.activeLearn.init_size
         self.step_size = CFG.activeLearn.step_size
         self.gen_percent = {'gen_sp': [], 'total_sp': []}
