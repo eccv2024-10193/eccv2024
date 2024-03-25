@@ -28,6 +28,7 @@ sb.sh
 sb/
 
 # Exceptions
+!cityscapes_filelist/*.txt
 !requirements.txt
 !cfg/config_template.yml
 !cfg/private_template.yml
